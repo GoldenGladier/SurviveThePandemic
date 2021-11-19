@@ -12,7 +12,7 @@ public class Objetivos : MonoBehaviour
     public int numObjetivos = 0;
     public TextMeshProUGUI textoMision;
 
-    [Header("Configuracion objetivos")]
+    [Header("Configuracion objetivos del tutorial")]
     public GameObject contenedorInstrucciones;
     public Objetivo[] objetivos;
 
@@ -20,27 +20,35 @@ public class Objetivos : MonoBehaviour
     {
         contenedorInstrucciones.SetActive(false);  
         textoMision.text = objetivos[numObjetivos].texto;
-        //yield return new WaitForSeconds(3.0f);
-        Activa_Desactiva_Tutorial();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(numObjetivos < objetivos.Length && tutorialActive){
+        if(tutorialActive && (numObjetivos < objetivos.Length) ){
             if( Input.GetKeyUp(objetivos[numObjetivos].key1) || Input.GetKeyUp(objetivos[numObjetivos].key2) ){
                     Debug.Log(objetivos[numObjetivos].mensajeConsola);
                     ActualizaObjetivo();                    
             }
         }
+        else if(numObjetivos < objetivos.Length){
+            StartCoroutine(Activa_Tutorial());            
+        }
     }
 
-    public IEnumerator Activa_Desactiva_Tutorial(){
-        Debug.Log("Iniciando espera");
-        yield return new WaitForSeconds(1);
-        tutorialActive = !tutorialActive;
+    public IEnumerator Activa_Tutorial(){
+        //Debug.Log("Iniciando espera");
+        yield return new WaitForSeconds(2);
+        tutorialActive = true;
+        contenedorInstrucciones.SetActive(true);  
         Debug.Log("Tutorial: " + tutorialActive);
     }
+    public IEnumerator Desactiva_Tutorial(){
+        yield return new WaitForSeconds(2);
+        tutorialActive = false;
+        contenedorInstrucciones.SetActive(false);  
+        Debug.Log("Tutorial: " + tutorialActive);
+    }    
 
     public void ActualizaObjetivo(){
         numObjetivos++;
@@ -49,8 +57,8 @@ public class Objetivos : MonoBehaviour
             textoMision.text = objetivos[numObjetivos].texto;
         }   
         else{
-            textoMision.text = "Terminaste Tutorial";
-            tutorialActive = false;
+            textoMision.text = "¡Completaste el tutorial!";
+            StartCoroutine(Desactiva_Tutorial());    
         }   
     }
 
