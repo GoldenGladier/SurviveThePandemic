@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogo: {fileID: 591198416}
   txtDialogo: {fileID: 1639812771}
-  configuracion: {fileID: 0}
+  configuracion: {fileID: 11400000, guid: 524ff2cfe798ce346a2bf06151b4baed, type: 2}
   dialogoEnsayo: []
 --- !u!1001 &1090327155
 PrefabInstance:
