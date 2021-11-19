@@ -15,7 +15,6 @@
 /SurviveThePandemic/Assets/Scenes/SampleScene/
 /SurviveThePandemic/Assets/TestMesh Pro/
 SurviveThePandemic/Assets/TextMesh Pro/
-/SurviveThePandemic/UserSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
