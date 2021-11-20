@@ -8,13 +8,27 @@ using TMPro;
 
 public class Objetivos : MonoBehaviour
 {
+    // Singleton
+    public static Objetivos singleton;
+    //
+
     public bool tutorialActive = false;
+    public bool finishTutorial = false;
     public int numObjetivos = 0;
     public TextMeshProUGUI textoMision;
 
     [Header("Configuracion objetivos del tutorial")]
     public GameObject contenedorInstrucciones;
     public Objetivo[] objetivos;
+
+    private void Awake(){
+        if(singleton == null){
+            singleton = this;
+        }
+        else{
+            DestroyImmediate(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -31,7 +45,7 @@ public class Objetivos : MonoBehaviour
                     ActualizaObjetivo();                    
             }
         }
-        else if(numObjetivos < objetivos.Length){
+        else if( (numObjetivos < objetivos.Length) && (tutorialActive == false) ){
             StartCoroutine(Activa_Tutorial());            
         }
     }
@@ -41,13 +55,14 @@ public class Objetivos : MonoBehaviour
         yield return new WaitForSeconds(2);
         tutorialActive = true;
         contenedorInstrucciones.SetActive(true);  
-        Debug.Log("Tutorial: " + tutorialActive);
+        //Debug.Log("Tutorial: " + tutorialActive);
     }
     public IEnumerator Desactiva_Tutorial(){
         yield return new WaitForSeconds(2);
         tutorialActive = false;
         contenedorInstrucciones.SetActive(false);  
         Debug.Log("Tutorial: " + tutorialActive);
+        finishTutorial = true;
     }    
 
     public void ActualizaObjetivo(){
