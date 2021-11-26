@@ -13,12 +13,14 @@ public class Llamadas : MonoBehaviour
 
     [Header("Notificaciones")]
     public GameObject Notificacion;
+    public Transform AnimateNotification;
     public TextMeshProUGUI txtNotificacion; 
     public string textoNotificacion = "Presiona X para contestar";  
 
     [Header("Llamadas")]
     public AudioSource Phone;
     public GameObject interfaceLlamadas;
+    public Transform AnimateCall;
     public TextMeshProUGUI contenedorTexto;
     //public KeyCode KeyAnswer = KeyCode.X; 
     //public KeyCode keyNext = KeyCode.Space; 
@@ -42,7 +44,7 @@ public class Llamadas : MonoBehaviour
                 StartCoroutine( StartCall() );       
             }
             else if( Input.GetKey(configuracion.ContestarLlamada) ){                
-                AnswerCall();  
+                StartCoroutine( AnswerCall() );  
                 //callAnswer = true;              
             }
         }              
@@ -50,18 +52,26 @@ public class Llamadas : MonoBehaviour
 
     public IEnumerator StartCall(){
         Phone.Play(0);
+        callSound = true;      
+        Debug.Log("Ring Ring");          
         yield return new WaitForSeconds(2);
-        callSound = true;
-        Debug.Log("Ring Ring");
         txtNotificacion.text = textoNotificacion;
         Notificacion.SetActive(true);
+        AnimateNotification.localPosition = new Vector2(0, -Screen.height);
+        AnimateNotification.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;          
         //yield return new WaitForSeconds(2);        
     }
 
-    public void AnswerCall(){
-        interfaceLlamadas.SetActive(true);    
+    public IEnumerator AnswerCall(){
+        interfaceLlamadas.SetActive(true);
+
+        AnimateCall.localPosition = new Vector2(0, -Screen.height);
+        AnimateCall.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;          
+        
         Phone.Pause();
         callSound = true;
+        AnimateNotification.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
+        yield return new WaitForSeconds(1);
         Notificacion.SetActive(false);
         StartCoroutine( SimularDialogos(llamadas[0].dialogos) );           
     }
@@ -80,6 +90,8 @@ public class Llamadas : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             yield return new WaitUntil( () => Input.GetKeyUp(configuracion.teclaSiguienteFrase) );
         }
+        AnimateCall.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
+        yield return new WaitForSeconds(1);        
         interfaceLlamadas.SetActive(false);         
     }    
 

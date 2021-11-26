@@ -19,6 +19,8 @@ public class Objetivos : MonoBehaviour
 
     [Header("Configuracion objetivos del tutorial")]
     public GameObject contenedorInstrucciones;
+    public Transform box;
+
     public Objetivo[] objetivos;
 
     private void Awake(){
@@ -52,14 +54,21 @@ public class Objetivos : MonoBehaviour
 
     public IEnumerator Activa_Tutorial(){
         //Debug.Log("Iniciando espera");
-        yield return new WaitForSeconds(2);
         tutorialActive = true;
-        contenedorInstrucciones.SetActive(true);  
+        yield return new WaitForSeconds(2);
+        
+        contenedorInstrucciones.SetActive(true); 
+
+        box.localPosition = new Vector2(0, -Screen.height);
+        box.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;         
         //Debug.Log("Tutorial: " + tutorialActive);
     }
     public IEnumerator Desactiva_Tutorial(){
-        yield return new WaitForSeconds(2);
         tutorialActive = false;
+        yield return new WaitForSeconds(2);
+        
+        box.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
+        yield return new WaitForSeconds(1);
         contenedorInstrucciones.SetActive(false);  
         Debug.Log("Tutorial: " + tutorialActive);
         finishTutorial = true;
