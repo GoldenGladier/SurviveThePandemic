@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 0.8039216}
+  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -650,10 +650,10 @@ RectTransform:
   m_Father: {fileID: 1608107852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -29.934952}
-  m_SizeDelta: {x: 235.3666, y: 59.869904}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -117.68622, y: -25.032837}
+  m_SizeDelta: {x: 235.3666, y: 59.8699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &284067506
 MonoBehaviour:
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78039217}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1971,72 +1971,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 12.8, z: 12.8}
   m_Center: {x: 5.9, y: 6.4, z: 0}
---- !u!1 &1111398204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1111398206}
-  - component: {fileID: 1111398205}
-  m_Layer: 0
-  m_Name: TutorialManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1111398205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111398204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e875a98aa7c01294b9d564ed8b91236a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorialActive: 0
-  finishTutorial: 0
-  numObjetivos: 0
-  textoMision: {fileID: 1135117843}
-  contenedorInstrucciones: {fileID: 284067504}
-  box: {fileID: 284067505}
-  objetivos:
-  - texto: Presiona W para avanzar
-    key1: 273
-    key2: 119
-    mensajeConsola: Detecte tecla W
-  - texto: Presiona D para girar a la derecha
-    key1: 275
-    key2: 100
-    mensajeConsola: Detecte tecla D
-  - texto: Presiona A para girar a la izquierda
-    key1: 276
-    key2: 97
-    mensajeConsola: Detecte tecla A
-  - texto: Presiona S para retroceder
-    key1: 274
-    key2: 115
-    mensajeConsola: Detecte tecla S
---- !u!4 &1111398206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111398204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1135117841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2245,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1177889761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177889756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e875a98aa7c01294b9d564ed8b91236a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialActive: 0
+  finishTutorial: 0
+  numObjetivos: 0
+  textoMision: {fileID: 1135117843}
+  contenedorInstrucciones: {fileID: 284067504}
+  box: {fileID: 284067505}
+  objetivos:
+  - texto: Presiona W para avanzar
+    key1: 273
+    key2: 119
+    mensajeConsola: Detecte tecla W
+  - texto: Presiona D para girar a la derecha
+    key1: 275
+    key2: 100
+    mensajeConsola: Detecte tecla D
+  - texto: Presiona A para girar a la izquierda
+    key1: 276
+    key2: 97
+    mensajeConsola: Detecte tecla A
+  - texto: Presiona S para retroceder
+    key1: 274
+    key2: 115
+    mensajeConsola: Detecte tecla S
 --- !u!1 &1191738935
 GameObject:
   m_ObjectHideFlags: 0
