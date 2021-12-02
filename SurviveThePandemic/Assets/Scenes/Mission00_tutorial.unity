@@ -1291,6 +1291,8 @@ MonoBehaviour:
   txtNotificacion: {fileID: 1135117843}
   textoNotificacion: Presiona X para contestar
   Phone: {fileID: 205592606}
+  vozCaller: {fileID: 8300000, guid: 8cd33c8b09ce0bd4093c662507659450, type: 3}
+  vozAnswer: {fileID: 8300000, guid: b0d038d69d43a7a46a6a2f51ace8e35b, type: 3}
   interfaceLlamadas: {fileID: 166237271}
   AnimateCall: {fileID: 166237272}
   contenedorTexto: {fileID: 1892152004}

@@ -8,7 +8,7 @@ using TMPro;
 
 public class Llamadas : MonoBehaviour
 {
-    //private bool callAnswer = false;
+    private bool callAnswer = false;
     private bool callSound = false;
 
     [Header("Notificaciones")]
@@ -19,6 +19,8 @@ public class Llamadas : MonoBehaviour
 
     [Header("Llamadas")]
     public AudioSource Phone;
+    public AudioClip vozCaller;    
+    public AudioClip vozAnswer;    
     public GameObject interfaceLlamadas;
     public Transform AnimateCall;
     public TextMeshProUGUI contenedorTexto;
@@ -43,9 +45,9 @@ public class Llamadas : MonoBehaviour
             if(callSound == false){                
                 StartCoroutine( StartCall() );       
             }
-            else if( Input.GetKey(configuracion.ContestarLlamada) ){                
+            else if( Input.GetKey(configuracion.ContestarLlamada) && callAnswer == false){                
                 StartCoroutine( AnswerCall() );  
-                //callAnswer = true;              
+                callAnswer = true;              
             }
         }              
     }
@@ -73,12 +75,22 @@ public class Llamadas : MonoBehaviour
         AnimateNotification.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
         yield return new WaitForSeconds(1);
         Notificacion.SetActive(false);
-        StartCoroutine( SimularDialogos(llamadas[0].dialogos) );           
+        StartCoroutine( SimularDialogos(llamadas[0].dialogos, llamadas[0].answer, llamadas[0].caller) );           
     }
 
-    public IEnumerator SimularDialogos(Dialogo[] dialogos){
+    public IEnumerator SimularDialogos(Dialogo[] dialogos, string answer, string caller){
         for( int i = 0; i < dialogos.Length; i++){
             contenedorTexto.text = "";
+            if(dialogos[i].talker == caller){
+                Debug.Log("MAMA");
+                Phone.clip = vozCaller;
+            }
+            else
+            {
+                Debug.Log("STEVEN");
+                Phone.clip = vozAnswer;
+            }  
+            Phone.Play(0);       
             for(int j = 0; j < dialogos[i].text.Length + 1; j++){
                 yield return new WaitForSeconds(configuracion.tiempoLetra);
                 if(Input.GetKey(configuracion.teclaSkip) || Input.GetKey(configuracion.teclaSkip2)){
@@ -88,7 +100,8 @@ public class Llamadas : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.5f);
-            yield return new WaitUntil( () => Input.GetKeyUp(configuracion.teclaSiguienteFrase) );
+            Phone.Pause();
+            yield return new WaitUntil( () => Input.GetKeyUp(configuracion.teclaSiguienteFrase) );            
         }
         AnimateCall.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
         yield return new WaitForSeconds(1);        
@@ -109,5 +122,6 @@ public class Llamada
 public class Dialogo
 {
     public string talker;
+    [TextArea(minLines:1, maxLines:6)]
     public string text;
 }
