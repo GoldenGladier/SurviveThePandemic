@@ -122,6 +122,6 @@ public class Llamada
 public class Dialogo
 {
     public string talker;
-    [TextArea(minLines:1, maxLines:6)]
+    [TextArea(minLines:3, maxLines:10)]
     public string text;
 }

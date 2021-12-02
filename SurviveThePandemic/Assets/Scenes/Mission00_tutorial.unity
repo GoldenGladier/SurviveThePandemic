@@ -1297,17 +1297,41 @@ MonoBehaviour:
   AnimateCall: {fileID: 166237272}
   contenedorTexto: {fileID: 1892152004}
   llamadas:
-  - caller: Mom
+  - caller: "Mam\xE1"
     answer: Steven
     dialogos:
-    - talker: Mom
-      text: "\xBFSteven? \xBFMe escuchas?"
     - talker: Steven
-      text: "Fuerte y claro Mam\xE1"
-    - talker: Mom
-      text: "\xBFEscuchaste las noticias sobre la pandemia y el nuevo virus?"
+      text: "Hola mam\xE1, \xBFTodo bien?"
+    - talker: "Mam\xE1"
+      text: "\xA1Steven! \xBFYa viste las noticias? \xA1LA OMS ACABA DE DECLARAR
+        PANDEMIA MUNDIAL POR UN VIRUS MUY EXTRA\xD1O Y PELIGROSO!\r"
     - talker: Steven
-      text: "\xBFQu\xE9? \xBFDe que estas hablando mam\xE1?"
+      text: "\xBF\xA1Qu\xE9!? \xA1No sabia nada de eso!\r"
+    - talker: "Mam\xE1"
+      text: "Deber\xE1s quedarte en casa lo m\xE1ximo posible. \n\xA1As\xED que tienes
+        que ir por v\xEDveres antes de que se agote todo!\r"
+    - talker: Steven
+      text: "Pero no se que comprar\r\n\xBFQu\xE9 cosas podr\xEDa necesitar?"
+    - talker: "Mam\xE1"
+      text: "Yo acabo de comprar muchas cosas, pero lo m\xE1s importante es comprar:"
+    - talker: "Mam\xE1"
+      text: Comida enlatada, cubrebocas, desinfectante, gel antibacterial, papel
+        higienico y botellas de agua.
+    - talker: "Mam\xE1"
+      text: "\xA1Tienes que comprar antes de que las cosas se agoten!"
+    - talker: Steven
+      text: "De acuerdo mam\xE1, muchas gracias por avisarme, ire de inmediato al
+        super mercado m\xE1s cercano."
+    - talker: "Mam\xE1"
+      text: "\xA1No olvides llevar un cubrebocas!\n\xA1Debemos cuidarnos desde este
+        instante!"
+    - talker: Steven
+      text: "Gracias por recordarmelo mam\xE1, buscar\xE9 uno de inmediato, cuidate
+        mucho porfavor."
+    - talker: "Mam\xE1"
+      text: "Tu tambi\xE9n mi ni\xF1o, \xA1te amo!"
+    - talker: Steven
+      text: "\xA1Y yo a ti mami! Nos vemos...."
   configuracion: {fileID: 11400000, guid: 524ff2cfe798ce346a2bf06151b4baed, type: 2}
 --- !u!1001 &689396016
 PrefabInstance:
@@ -2032,8 +2056,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Presiona W para caminar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
+  m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2057,7 +2081,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.8
+  m_fontSize: 24.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2607,8 +2631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -157, y: 19}
-  m_SizeDelta: {x: 295.21094, y: 18.911896}
+  m_AnchoredPosition: {x: -197, y: 26}
+  m_SizeDelta: {x: 364.618, y: 15.4415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605320070
 MonoBehaviour:
@@ -2632,8 +2656,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Preciona ESPACIO para acelerar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
+  m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2662,7 +2686,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 32
   m_fontStyle: 0
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
@@ -2696,7 +2720,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1605320071
@@ -3162,10 +3186,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Conversation...
+  m_text: Llamada entrante...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
+  m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3189,8 +3213,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3228,7 +3252,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1892152005
