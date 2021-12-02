@@ -8,11 +8,27 @@ public class AI_npc : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public GameObject goalDestination;
 
-    // Start is called before the first frame update
+    private bool calculandoDestino = false;
+
     void Start()
     {
         navMeshAgent.destination = goalDestination.transform.position;
     }
 
-    // Update is called once per frame
+    void Update () {
+        if (navMeshAgent.remainingDistance < 2f){
+            if(calculandoDestino != true){
+                calculandoDestino = true;
+                StartCoroutine (nuevoDestino());
+            }
+        }
+    }    
+
+    public IEnumerator nuevoDestino(){
+        goalDestination = GeneradorDestinos.singleton.generarNuevoDestino();
+        navMeshAgent.destination = goalDestination.transform.position; 
+        yield return new WaitForSeconds(5f);
+        calculandoDestino = false;
+    }
+
 }
