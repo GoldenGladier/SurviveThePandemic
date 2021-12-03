@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: 28af21c30e7c4044d8822ea3ab2ef590
+  - enabled: 1
+    path: Assets/Scenes/Internet.unity
+    guid: ce7cf251bebe1fe49b45b7b6de842abc
+  - enabled: 1
+    path: Assets/Scenes/Local.unity
+    guid: f0d046dedc8f2924199403e85907d690
+  - enabled: 1
+    path: Assets/Scenes/Mapa.unity
+    guid: 3e043471cf8886a4ca260315fa62de39
+  - enabled: 1
+    path: Assets/Scenes/Tienda.unity
+    guid: 94454d21a4c4f984cbe1b90cc620a842
   m_configObjects: {}
