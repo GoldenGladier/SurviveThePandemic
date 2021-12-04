@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -41802,6 +41802,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.000001, y: 0.2, z: 4.000001}
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!1 &1588572601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: db77008ed8f9c394790febd08d0c7f6d, type: 3}
+  m_PrefabInstance: {fileID: 287020075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1588572602
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588572601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0999999
+  m_Height: 3.6999998
+  m_Direction: 1
+  m_Center: {x: -2, y: 3.85, z: -2.25}
 --- !u!1001 &1591561576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50812,6 +50831,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 2008239321}
   goalDestination: {fileID: 0}
+--- !u!114 &2008239326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008239319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38d2eed014c92445b794c6c382fb0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  barraDeVida: {fileID: 438961282}
 --- !u!1 &2009140622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbd006ce8fba20c4c82bd428ac30da6c, type: 3}
