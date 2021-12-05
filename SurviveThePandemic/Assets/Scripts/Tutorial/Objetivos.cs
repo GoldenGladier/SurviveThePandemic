@@ -8,13 +8,29 @@ using TMPro;
 
 public class Objetivos : MonoBehaviour
 {
+    // Singleton
+    public static Objetivos singleton;
+    //
+
     public bool tutorialActive = false;
+    public bool finishTutorial = false;
     public int numObjetivos = 0;
     public TextMeshProUGUI textoMision;
 
     [Header("Configuracion objetivos del tutorial")]
     public GameObject contenedorInstrucciones;
+    public Transform box;
+
     public Objetivo[] objetivos;
+
+    private void Awake(){
+        if(singleton == null){
+            singleton = this;
+        }
+        else{
+            DestroyImmediate(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -31,23 +47,31 @@ public class Objetivos : MonoBehaviour
                     ActualizaObjetivo();                    
             }
         }
-        else if(numObjetivos < objetivos.Length){
+        else if( (numObjetivos < objetivos.Length) && (tutorialActive == false) ){
             StartCoroutine(Activa_Tutorial());            
         }
     }
 
     public IEnumerator Activa_Tutorial(){
         //Debug.Log("Iniciando espera");
-        yield return new WaitForSeconds(2);
         tutorialActive = true;
-        contenedorInstrucciones.SetActive(true);  
-        Debug.Log("Tutorial: " + tutorialActive);
+        yield return new WaitForSeconds(2);
+        
+        contenedorInstrucciones.SetActive(true); 
+
+        box.localPosition = new Vector2(0, -Screen.height);
+        box.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;         
+        //Debug.Log("Tutorial: " + tutorialActive);
     }
     public IEnumerator Desactiva_Tutorial(){
-        yield return new WaitForSeconds(2);
         tutorialActive = false;
+        yield return new WaitForSeconds(2);
+        
+        box.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
+        yield return new WaitForSeconds(1);
         contenedorInstrucciones.SetActive(false);  
         Debug.Log("Tutorial: " + tutorialActive);
+        finishTutorial = true;
     }    
 
     public void ActualizaObjetivo(){

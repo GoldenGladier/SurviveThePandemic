@@ -11,5 +11,7 @@ public class ConfigDialogos : ScriptableObject
 
     public KeyCode teclaSiguienteFrase = KeyCode.Space;
     public KeyCode teclaInicioDialogo = KeyCode.B;
-    public KeyCode teclaInicioDialogo2 = KeyCode.JoystickButton3;    
+    public KeyCode teclaInicioDialogo2 = KeyCode.JoystickButton3;   
+
+    public KeyCode ContestarLlamada = KeyCode.X;    
 }
