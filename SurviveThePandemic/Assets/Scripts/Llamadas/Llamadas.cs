@@ -125,3 +125,4 @@ public class Dialogo
     [TextArea(minLines:3, maxLines:10)]
     public string text;
 }
+

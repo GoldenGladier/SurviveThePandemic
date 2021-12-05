@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44223863, g: 0.4912609, b: 0.5711532, a: 1}
+  m_IndirectSpecularColor: {r: 0.44223815, g: 0.49126017, b: 0.57115215, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1636,7 +1636,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -230, y: 75.404}
-  m_SizeDelta: {x: 108.8362, y: 150.8087}
+  m_SizeDelta: {x: 112.2611, y: 150.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976695376
 MonoBehaviour:
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d77019527f4de7c4d8a33304751e5397, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1eb9d72f4fa22094b8a93cbfbee452c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2306,6 +2306,10 @@ MonoBehaviour:
     key1: 274
     key2: 115
     mensajeConsola: Detecte tecla S
+  - texto: Presiona L para abrir el menu de misiones
+    key1: 108
+    key2: 109
+    mensajeConsola: Detecte tecla L
 --- !u!1 &1191738935
 GameObject:
   m_ObjectHideFlags: 0
