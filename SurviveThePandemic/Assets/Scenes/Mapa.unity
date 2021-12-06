@@ -36924,6 +36924,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2843909369972686622, guid: b6d0039d0258a8d4c85c1ec1e41d507b, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.03304273
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b6d0039d0258a8d4c85c1ec1e41d507b, type: 3}
       propertyPath: m_Name
       value: Smoker_suit_man
@@ -36983,7 +36987,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1408638231}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 0.03
   m_Speed: 2
   m_Acceleration: 2
   avoidancePriority: 10
@@ -36992,7 +36996,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.1
+  m_Height: 0.13
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -51028,7 +51032,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2008239319}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 0.02
   m_Speed: 2
   m_Acceleration: 2
   avoidancePriority: 10
