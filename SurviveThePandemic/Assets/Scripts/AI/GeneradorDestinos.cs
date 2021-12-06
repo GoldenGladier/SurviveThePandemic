@@ -28,7 +28,7 @@ public class GeneradorDestinos : MonoBehaviour
     // }  
 
     public GameObject generarNuevoDestino(){
-        int nDestino = Random.Range(0, destinos.Length);
+        int nDestino = Random.Range(0, destinos.Length+1);
         // Debug.Log("Destinos: " + destinos.Length);
         Debug.Log("Destino nuevo: " + nDestino);
         return destinos[nDestino];
