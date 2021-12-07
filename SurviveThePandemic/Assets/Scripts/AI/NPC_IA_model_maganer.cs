@@ -22,8 +22,7 @@ public class NPC_IA_model_maganer : MonoBehaviour
 
     public GameObject generarModeloAleatorio(){
         int nModelo = Random.Range(0, NPC_IA_Models.Length);
-        // Debug.Log("Destinos: " + destinos.Length);
-        Debug.Log("Destino Modelo: " + nModelo);
+        // Debug.Log("Destino Modelo: " + nModelo);
         return NPC_IA_Models[nModelo];
     }
 }
