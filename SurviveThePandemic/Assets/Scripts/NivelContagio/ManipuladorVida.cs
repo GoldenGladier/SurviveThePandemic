@@ -66,7 +66,7 @@ public class ManipuladorVida : MonoBehaviour
     {
         if (other.tag == "NPC" && Risk != null)
         {
-            Debug.Log(" RIESGO: " + Risk.Name + "  DAÑO: " + Risk.Damage);
+            // Debug.Log(" RIESGO: " + Risk.Name + "  DAÑO: " + Risk.Damage);
             currentDamageTime += Time.deltaTime;
             if (currentDamageTime > damageTime)
             {

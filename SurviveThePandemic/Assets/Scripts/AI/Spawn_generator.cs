@@ -80,7 +80,7 @@ public class Spawn_generator : MonoBehaviour
             // spawns the enemy
             GameObject Enemy = (GameObject) Instantiate(NPC_IA_Model, gameObject.transform.position, Quaternion.identity);
             // calls a function on the enemy that applies the spawner's ID to the enemy
-            Enemy.SendMessage("setName", SpawnID);
+            // Enemy.SendMessage("setName", SpawnID);
         }
         else
         {
