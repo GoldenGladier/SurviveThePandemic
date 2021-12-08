@@ -40,6 +40,14 @@ public class Dialogos : MonoBehaviour
         {
             botonContinue.SetActive(true);
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            siguienteParrafo();
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            botonCerrar();
+        }
     }
 
     IEnumerator TextDialogo()
