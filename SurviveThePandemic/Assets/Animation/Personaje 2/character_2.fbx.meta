@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d8fe123cac27e0a4f88b9850fa1f903e
+guid: 7f5940d1ce40b784aaf8c6266d6b8ad7
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
   - first:
-      74: 1827226128182048838
-    second: Take 001
+      74: -203655887218126122
+    second: mixamo.com
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -76,10 +76,10 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - 0c946eee9e893c3459bc7dfe9d91c567
-  - 64c1ea3d4b5007f46b8ebe44276056f4
-  - 9024114aaa51c1746ae78578afea7a57
-  - 8855e4015c56e004a8133d7738e7e11c
+  - ae041f04137b68e499d8264267a631e0
+  - 73d0105230a9fee41ac042bd3569d596
+  - 1302fc727167c584ebbde7d084500f51
+  - f662aed2fb7aa5c4c8f5f7a4f9c4d2a2
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
