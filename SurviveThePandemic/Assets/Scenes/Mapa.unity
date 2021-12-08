@@ -32717,9 +32717,57 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 862698325}
     - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_edgeBuffer
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
       propertyPath: actualMission
       value: 
       objectReference: {fileID: 862698326}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: iconTargetColor.g
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetDistanceY
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetIconScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetIconScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetIconScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: distanceTargetColor.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: distanceTargetColor.g
+      value: 0.5454451
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: distanceTargetColor.r
+      value: 0.096261986
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetDistanceScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetDistanceScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167956913963790820, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
+      propertyPath: m_targetDistanceScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e637632ea78a324c91e64c60b476bab, type: 3}
 --- !u!223 &862698325 stripped

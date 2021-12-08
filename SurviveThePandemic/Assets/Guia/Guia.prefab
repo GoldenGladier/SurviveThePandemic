@@ -635,6 +635,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7776798562775273892}
     - target: {fileID: 8346278564378176061, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
+      propertyPath: actualMission
+      value: 
+      objectReference: {fileID: 8176351544126882629}
+    - target: {fileID: 8346278564378176061, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
       propertyPath: missionComplete
       value: 'Listo '
       objectReference: {fileID: 0}
@@ -650,6 +654,14 @@ PrefabInstance:
       propertyPath: missionCompleteText
       value: 
       objectReference: {fileID: 7776798561510485899}
+    - target: {fileID: 8346278564378176061, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
+      propertyPath: m_targetIconOnScreen
+      value: 
+      objectReference: {fileID: 21300000, guid: 24b1acffeeae5ff4fac97982581a4d8c, type: 3}
+    - target: {fileID: 8346278564378176061, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
+      propertyPath: m_targetIconOffScreen
+      value: 
+      objectReference: {fileID: 21300000, guid: ba199caec83ecd2418d38af6b8bb586b, type: 3}
     - target: {fileID: 8346278564378176061, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
       propertyPath: missionDescriptionText
       value: 
@@ -704,6 +716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
+--- !u!1 &8176351544126882629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9047991650532743324, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
+  m_PrefabInstance: {fileID: 930222154729003993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8805642024487623167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8564506029247955494, guid: f1cb069486b79a641be58a43af31eed7, type: 3}
