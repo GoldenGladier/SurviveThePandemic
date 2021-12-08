@@ -19,12 +19,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
-      : position error = 3.653975 mm\n\t'mixamorig:LeftLeg' : position error = 11.576485
-      mm\n\t'mixamorig:LeftFoot' : position error = 9.808436 mm\n\t'mixamorig:RightUpLeg'
-      : position error = 3.092632 mm\n\t'mixamorig:RightLeg' : position error = 11.586164
-      mm\n\t'mixamorig:RightFoot' : position error = 9.726843 mm\n"
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
