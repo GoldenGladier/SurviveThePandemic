@@ -41,6 +41,7 @@ public class Coin : MonoBehaviour
             coins_reference.Coins++;
             yield return new WaitForSeconds(0.8f);
             ContenedorPadre.SetActive(false);
+            // yield return new WaitForSeconds(1);
             NextCoin.SetActive(true);
         }
     }    

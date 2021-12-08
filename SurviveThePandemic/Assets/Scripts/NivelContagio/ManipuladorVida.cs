@@ -43,7 +43,7 @@ public class ManipuladorVida : MonoBehaviour
         {
             case RisksTypes.Verde:
                 Risk.Name = "Verde";
-                Risk.Damage = 2;
+                Risk.Damage = 5;
                 break;
             case RisksTypes.Amarillo:
                 Risk.Name = "Amarillo";
