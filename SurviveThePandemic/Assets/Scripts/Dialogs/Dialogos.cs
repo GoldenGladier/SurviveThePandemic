@@ -6,7 +6,7 @@ using TMPro;
 public class Dialogos : MonoBehaviour
 {
     public TextMeshProUGUI textD;
-    [TextArea(30,3)];
+    [TextArea(30,3)]
     public string[] parrafos;
     int index;
     public float velParrafo;
