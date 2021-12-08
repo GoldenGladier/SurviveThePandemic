@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class rutaCentroComercial : MonoBehaviour
+public class ruta : MonoBehaviour
 {
     //Información de la Misión
     [Header("Title and Description")]
@@ -36,7 +35,7 @@ public class rutaCentroComercial : MonoBehaviour
     private RectTransform m_distance;
     public Font Fuente;
     public int _fontSize;
-    public int bandera=0;
+
     [Space]
     [Range(0, 100)]
     public float m_edgeBuffer;
@@ -55,24 +54,14 @@ public class rutaCentroComercial : MonoBehaviour
     public Color iconTargetColor = new Vector4(1, 1, 1, 1);
     public Color distanceTargetColor = new Vector4(1, 1, 1, 1);
 
-
     //Inicio Script
     void Start()
-    {
-        //mainCamera = Camera.main;
-        //mainCanvas = FindObjectOfType<Canvas>();
-        //Debug.Assert((mainCanvas != null), "Asigna Canvas para Funcionar");
-        //InstainateTargetIcon();
-    }
-
-    public void Inicio()
     {
         mainCamera = Camera.main;
         mainCanvas = FindObjectOfType<Canvas>();
         Debug.Assert((mainCanvas != null), "Asigna Canvas para Funcionar");
         InstainateTargetIcon();
     }
-
     //Update for Frames
     void Update()
     {
@@ -91,11 +80,6 @@ public class rutaCentroComercial : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (bandera == 0)
-            {
-                Inicio();
-                bandera = 1;
-            }
             completeUI.SetActive(true);
             Destroy(m_iconImage);
             Destroy(text_distance);
