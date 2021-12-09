@@ -18,6 +18,10 @@ SurviveThePandemic/Assets/TextMesh Pro/
 SurviveThePandemic/UserSettings/
 /SurviveThePandemic/UserSettings/
 
+\SurviveThePandemic\Assets\Scenes\Mapa\
+/SurviveThePandemic/Assets/Scenes/Mapa/
+
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
