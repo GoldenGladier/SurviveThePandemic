@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class missionWayPoint : MonoBehaviour
 {
@@ -12,8 +11,8 @@ public class missionWayPoint : MonoBehaviour
 
     private void Update()
     {
-        float minX = img.GetPixelAdjustedRect().width / 2;
-        float maxX = Screen.width - minX;
+        float minX = img.GetPixedAjustedRect().width / 2;
+        float maxX = Screen.widht - minX;
 
         float minY = img.GetPixelAdjustedRect().width / 2;
         float maxY = Screen.height - minY;
