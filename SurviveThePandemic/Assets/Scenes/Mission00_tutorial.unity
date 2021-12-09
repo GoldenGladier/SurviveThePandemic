@@ -4877,7 +4877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numeroEscena: 5
+  numeroEscena: 4
 --- !u!1001 &3434214784683463225
 PrefabInstance:
   m_ObjectHideFlags: 0
