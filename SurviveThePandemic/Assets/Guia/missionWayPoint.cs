@@ -5,14 +5,20 @@ using UnityEngine.UI;
 
 public class missionWayPoint : MonoBehaviour
 {
+
     // Indicator icon
     public Image img;
     // The target (location, enemy, etc..)
     public Transform target;
+    public GameObject player;
     // UI Text to display the distance
     public Text meter;
     // To adjust the position of the icon
     public Vector3 offset;
+
+    public Camera mainCamera;
+
+    //MODIFIED
 
     private void Update()
     {
@@ -32,7 +38,7 @@ public class missionWayPoint : MonoBehaviour
         Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset);
 
         // Check if the target is behind us, to only show the icon once the target is in front
-        if (Vector3.Dot((target.position - transform.position), transform.forward) < 0)
+        if (Vector3.Dot((target.position - player.transform.position).normalized, player.transform.forward) < 0)
         {
             // Check if the target is on the left side of the screen
             if (pos.x < Screen.width / 2)
@@ -54,6 +60,8 @@ public class missionWayPoint : MonoBehaviour
         // Update the marker's position
         img.transform.position = pos;
         // Change the meter text to the distance with the meter unit 'm'
-        meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
+ //       meter.text = Vector3.Distance((int)target.position, player.transform.position).ToString()+"m";
+        meter.text = ((int)Vector3.Distance(target.position, player.transform.position)).ToString() + "m";
     }
 }
+
