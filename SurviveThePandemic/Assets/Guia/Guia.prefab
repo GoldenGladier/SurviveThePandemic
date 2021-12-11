@@ -623,6 +623,44 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Dirigete al centro comercial
+--- !u!114 &8098975276713540531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176351544126882629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d3417eea531634b98a90b8e99b3c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionTitle: misioon
+  missionTitleText: {fileID: 7776798562909124966}
+  missionDescription: des
+  missionDescriptionText: {fileID: 1116903654549445534}
+  missionComplete: completado
+  missionCompleteText: {fileID: 7776798561510485899}
+  completeUI: {fileID: 7776798561860884323}
+  actualMission: {fileID: 0}
+  nextMission: {fileID: 0}
+  delay: 0
+  mainCamera: {fileID: 0}
+  mainCanvas: {fileID: 0}
+  m_targetIconOnScreen: {fileID: 0}
+  m_targetIconOffScreen: {fileID: 0}
+  player: {fileID: 0}
+  Fuente: {fileID: 0}
+  _fontSize: 0
+  m_edgeBuffer: 0
+  m_targetIconScale: {x: 0, y: 0, z: 0}
+  m_targetDistanceScale: {x: 0, y: 0, z: 0}
+  m_targetDistanceX: 0
+  m_targetDistanceY: 0
+  PointTarget: 1
+  ShowDebugLines: 0
+  iconTargetColor: {r: 1, g: 1, b: 1, a: 1}
+  distanceTargetColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &930222154729003993
 PrefabInstance:
   m_ObjectHideFlags: 0
