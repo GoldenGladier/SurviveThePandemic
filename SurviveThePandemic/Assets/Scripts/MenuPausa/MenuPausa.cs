@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject menuPausa;
 
     private bool juegoPausado = false;
+    private Scene scene;
+
+    void Start()
+    {
+        scene = SceneManager.GetActiveScene();
+    }    
 
     private void Update()
     {
@@ -48,4 +55,18 @@ public class MenuPausa : MonoBehaviour
         Debug.Log("Cerrando Juego");
         Application.Quit();
     }
+
+    public void ReiniciarNivel()
+    {
+        Debug.Log("Reiniciando Escena " + scene.name);
+        SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
+        // Application.Quit();
+    }    
+
+    public void Salir_Menu()
+    {
+        Debug.Log("Saliendo al menu");
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        // Application.Quit();
+    }       
 }
