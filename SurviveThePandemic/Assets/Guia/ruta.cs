@@ -8,6 +8,7 @@ public class ruta : MonoBehaviour
     public GameObject panelMision;
     public GameObject panelSiguiente;
     public GameObject elemento;
+    public GameObject siguienteElemento;
 
 
     void Start()
@@ -19,6 +20,7 @@ public class ruta : MonoBehaviour
         if (other.tag == "Player")
         {
             panelMision.SetActive(false);
+            siguienteElemento.SetActive(true);
             Destroy(elemento);
             panelSiguiente.SetActive(true);
 
