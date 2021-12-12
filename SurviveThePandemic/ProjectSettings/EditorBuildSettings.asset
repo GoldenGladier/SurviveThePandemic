@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Internet.unity
     guid: ce7cf251bebe1fe49b45b7b6de842abc
   - enabled: 1
-    path: Assets/Scenes/Mapa.unity
-    guid: 3e043471cf8886a4ca260315fa62de39
+    path: Assets/Scenes/Mapa - copia.unity
+    guid: c9ed9e4f18ee6cb409783a3e310e14d6
   - enabled: 1
     path: Assets/Scenes/Pasillo.unity
     guid: 62c9698c6664cf74fb88e38d3dbd8c34
@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Local 2.unity
     guid: 6e8234a738a99fd4a840756c7667b35b
+  - enabled: 1
+    path: Assets/Scenes/Mapa.unity
+    guid: 3e043471cf8886a4ca260315fa62de39
   m_configObjects: {}

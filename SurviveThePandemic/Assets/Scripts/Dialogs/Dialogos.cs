@@ -12,6 +12,7 @@ public class Dialogos : MonoBehaviour
     public Sprite[] ayudaVisual;
     int index;
     public float velParrafo;
+    public GameObject componenteCompleto;
 
     public GameObject botonContinue;
     public GameObject botonQuitar;
