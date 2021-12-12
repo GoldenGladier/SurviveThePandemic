@@ -17,6 +17,7 @@ public class Coin : MonoBehaviour
     public TextMeshProUGUI contenedorTexto;
     public GameObject Player;
     private CountCoins coins_reference;
+    private VidaPlayer playerVida;
 
     [Header("Next Coin")]   
     public GameObject NextCoin;
@@ -26,7 +27,15 @@ public class Coin : MonoBehaviour
     void Start()
     {
         coins_reference = Player.GetComponent<CountCoins>();
+        playerVida = Player.GetComponent<VidaPlayer>();
     }
+
+    void Update()
+    {
+        if(playerVida.vida < 0){
+            AudioCoin.Pause();
+        }
+    }    
 
     private IEnumerator OnTriggerStay(Collider other)
     {
