@@ -2903,6 +2903,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4976301495139821639, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.data[2]
       value: "En las calles hay muchas personas y no puedes saber quien esta contagiado
