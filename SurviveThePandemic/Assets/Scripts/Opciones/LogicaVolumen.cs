@@ -13,7 +13,7 @@ public class LogicaVolumen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sliderValue = PlayerPrefs.GetFloat("volumenAudio", 0.5f);
+        sliderValue = PlayerPrefs.GetFloat("volumenAudio", .5f);
         AudioListener.volume = slider.value;
         RevisarSiEstoyMute();
     }
