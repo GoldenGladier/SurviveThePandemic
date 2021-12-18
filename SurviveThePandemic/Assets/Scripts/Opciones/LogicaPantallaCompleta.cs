@@ -19,12 +19,6 @@ public class LogicaPantallaCompleta : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ActivarPantallaCompleta(bool pantallaCompleta)
     {
         Screen.fullScreen = pantallaCompleta;
