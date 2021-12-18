@@ -14,15 +14,10 @@ public class LogicaVolumen : MonoBehaviour
     void Start()
     {
         sliderValue = PlayerPrefs.GetFloat("volumenAudio", .5f);
+        slider.value = sliderValue;
         AudioListener.volume = slider.value;
         RevisarSiEstoyMute();
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
 
     public void ChangeSlider(float valor)
     {

@@ -10,12 +10,18 @@ public class MenuPausa : MonoBehaviour
 
     [SerializeField] private GameObject menuPausa;
 
+    public GameObject panelMenu;
+    public GameObject panelConfiguracion;    
+
     private bool juegoPausado = false;
     private Scene scene;
 
     void Start()
     {
         scene = SceneManager.GetActiveScene();
+        panelConfiguracion.SetActive(false);
+        panelMenu.SetActive(false);
+        AudioListener.volume = PlayerPrefs.GetFloat("volumenAudio", .5f);     
     }    
 
     private void Update()
