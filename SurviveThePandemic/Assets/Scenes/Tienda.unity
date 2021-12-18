@@ -2327,6 +2327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botonPausa: {fileID: 1196844118}
   menuPausa: {fileID: 187030161}
+  panelMenu: {fileID: 0}
+  panelConfiguracion: {fileID: 0}
 --- !u!114 &390269782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8276,7 +8278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e09a871df5a434c47898ee4068ae6ad8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: e09a871df5a434c47898ee4068ae6ad8, type: 3}
       propertyPath: m_LocalPosition.x
